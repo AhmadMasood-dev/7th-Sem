@@ -1,0 +1,1 @@
+Here the all courses of 7th semesters data 
