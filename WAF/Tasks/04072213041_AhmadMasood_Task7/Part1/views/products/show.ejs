@@ -1,0 +1,29 @@
+<% title = product.productName || 'Product' %>
+<h1><%= product.productName %></h1>
+<ul class="list-group mb-3">
+  <li class="list-group-item">
+    <strong>Firm:</strong> <%= product.firmName %>
+  </li>
+  <li class="list-group-item"><strong>Price:</strong> <%= product.price %></li>
+  <li class="list-group-item">
+    <strong>Quantity:</strong> <%= product.quantity %>
+  </li>
+  <li class="list-group-item">
+    <strong>Expiry:</strong> <%= product.expiryDate ?
+    product.expiryDate.toISOString().slice(0,10) : '' %>
+  </li>
+</ul>
+<a class="btn btn-secondary" href="/products/<%= product._id %>/edit">Edit</a>
+<form
+  action="/products/<%= product._id %>?_method=DELETE"
+  method="POST"
+  style="display: inline"
+>
+  <button
+    class="btn btn-danger"
+    onclick="return confirm('Delete this product?')"
+  >
+    Delete
+  </button>
+</form>
+<a class="btn btn-link" href="/products">Back to list</a>

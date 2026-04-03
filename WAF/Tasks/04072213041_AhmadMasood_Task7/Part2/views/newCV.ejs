@@ -1,0 +1,9 @@
+<% title = 'Add New CV' %>
+<h1>Add New CV</h1>
+<form action="/resumes" method="POST" enctype="multipart/form-data">
+  <%- include('partials/_form', { resume: resume }) %>
+  <div class="mt-3">
+    <button class="btn btn-primary">Create CV</button>
+    <a class="btn btn-secondary" href="/resumes">Cancel</a>
+  </div>
+</form>

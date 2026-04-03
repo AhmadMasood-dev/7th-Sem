@@ -1,0 +1,117 @@
+<div class="row">
+  <div class="col-md-6 mb-3">
+    <label class="form-label">Full name</label>
+    <input
+      name="fullname"
+      class="form-control"
+      required
+      value="<%= resume.fullname || '' %>"
+    />
+  </div>
+  <div class="col-md-3 mb-3">
+    <label class="form-label">Contact number</label>
+    <input
+      name="contactNumber"
+      class="form-control"
+      value="<%= resume.contactNumber || '' %>"
+    />
+  </div>
+  <div class="col-md-3 mb-3">
+    <label class="form-label">Email</label>
+    <input
+      name="email"
+      type="email"
+      class="form-control"
+      value="<%= resume.email || '' %>"
+    />
+  </div>
+</div>
+
+<div class="mb-3">
+  <label class="form-label">Summary</label>
+  <textarea name="summary" class="form-control" rows="3">
+<%= resume.summary || '' %></textarea
+  >
+</div>
+
+<div class="row">
+  <div class="col-md-6 mb-3">
+    <label class="form-label">Qualifications (comma separated)</label>
+    <input
+      name="qualifications"
+      class="form-control"
+      value="<%= resume.qualifications ? resume.qualifications.join(', ') : '' %>"
+    />
+  </div>
+  <div class="col-md-6 mb-3">
+    <label class="form-label">Certifications (comma separated)</label>
+    <input
+      name="certifications"
+      class="form-control"
+      value="<%= resume.certifications ? resume.certifications.join(', ') : '' %>"
+    />
+  </div>
+</div>
+
+<div class="mb-3">
+  <label class="form-label">Professional experience</label>
+  <small class="form-text text-muted d-block mb-1"
+    >Enter one line per experience: company | role | start | end |
+    description</small
+  >
+  <textarea name="experience" class="form-control" rows="4">
+<% if (resume.professionalExperience && resume.professionalExperience.length) { %>
+<% resume.professionalExperience.forEach(e => { %>
+<%= `${e.company} | ${e.role} | ${e.startDate || ''} | ${e.endDate || ''} | ${e.description || ''}` %>
+<% }) %>
+<% } %></textarea
+  >
+</div>
+
+<div class="row">
+  <div class="col-md-4 mb-3">
+    <label class="form-label">Skills (comma separated)</label>
+    <input
+      name="skills"
+      class="form-control"
+      value="<%= resume.skills ? resume.skills.join(', ') : '' %>"
+    />
+  </div>
+  <div class="col-md-4 mb-3">
+    <label class="form-label">Languages (comma separated)</label>
+    <input
+      name="languages"
+      class="form-control"
+      value="<%= resume.languages ? resume.languages.join(', ') : '' %>"
+    />
+  </div>
+  <div class="col-md-4 mb-3">
+    <label class="form-label">Hobbies (comma separated)</label>
+    <input
+      name="hobbies"
+      class="form-control"
+      value="<%= resume.hobbies ? resume.hobbies.join(', ') : '' %>"
+    />
+  </div>
+</div>
+
+<div class="mb-3">
+  <label class="form-label">Research statement</label>
+  <textarea name="researchStatement" class="form-control" rows="3">
+<%= resume.researchStatement || '' %></textarea
+  >
+</div>
+
+<div class="mb-3">
+  <label class="form-label"
+    >Documents (educational/experience certificates)</label
+  >
+  <input name="documents" type="file" class="form-control" multiple />
+  <% if (resume.documents && resume.documents.length) { %>
+  <ul class="mt-2">
+    <% resume.documents.forEach(d => { %>
+    <li><a href="<%= d.path %>" target="_blank"><%= d.originalname %></a></li>
+    <% }) %>
+  </ul>
+  <% } %>
+</div>

@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "68e4acb559ac536cf6cebeab"
+  },
+  "registrationNumber": 10,
+  "degreeEnrolled": "cs",
+  "enrollmentYear": 2022,
+  "favoriteCourse": "ict"
+},
+{
+  "_id": {
+    "$oid": "68e4acb559ac536cf6cebeac"
+  },
+  "registrationNumber": 11,
+  "degreeEnrolled": "cs",
+  "enrollmentYear": 2021,
+  "favoriteCourse": "mad"
+},
+{
+  "_id": {
+    "$oid": "68e4acb559ac536cf6cebead"
+  },
+  "registrationNumber": 12,
+  "degreeEnrolled": "it",
+  "enrollmentYear": 2020,
+  "favoriteCourse": "ai"
+},
+{
+  "_id": {
+    "$oid": "68e4acb559ac536cf6cebeae"
+  },
+  "registrationNumber": 14,
+  "degreeEnrolled": "it",
+  "enrollmentYear": 2023,
+  "favoriteCourse": "wad"
+},
+{
+  "_id": {
+    "$oid": "68e4acb559ac536cf6cebeaf"
+  },
+  "registrationNumber": 15,
+  "degreeEnrolled": "cs",
+  "enrollmentYear": 2024,
+  "favoriteCourse": "ict"
+}]

@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "68e4a7c359ac536cf6cebea6"
+  },
+  "registrationNumber": 1,
+  "name": "ahmad",
+  "cityName": "raw/isl"
+},
+{
+  "_id": {
+    "$oid": "68e4a81859ac536cf6cebea7"
+  },
+  "registrationNumber": 2,
+  "name": "ahmad2",
+  "cityName": "raw/isl"
+},
+{
+  "_id": {
+    "$oid": "68e4a81f59ac536cf6cebea8"
+  },
+  "registrationNumber": 3,
+  "name": "ahmad3",
+  "cityName": "raw/isl"
+},
+{
+  "_id": {
+    "$oid": "68e4a82c59ac536cf6cebea9"
+  },
+  "registrationNumber": 5,
+  "name": "zain",
+  "cityName": "raw/isl"
+},
+{
+  "_id": {
+    "$oid": "68e4a84759ac536cf6cebeaa"
+  },
+  "registrationNumber": 4,
+  "name": "hassan",
+  "cityName": "raw/isl"
+}]

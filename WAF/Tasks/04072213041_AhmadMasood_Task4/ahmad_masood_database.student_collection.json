@@ -1,0 +1,106 @@
+[
+  {
+    "name": "Umer Khan",
+    "age": 25,
+    "grades": {
+      "math": 85,
+      "english": 78,
+      "computer": 92
+    },
+    "address": {
+      "city": "Lahore",
+      "zipcode": "54000"
+    }
+  },
+  {
+    "name": "Ayesha Ahmed",
+    "age": 23,
+    "grades": {
+      "math": 95,
+      "english": 92,
+      "computer": 88
+    },
+    "address": {
+      "city": "Islamabad",
+      "zipcode": "44000"
+    }
+  },
+  {
+    "name": "Ali Hassan",
+    "age": 24,
+    "grades": {
+      "math": 75,
+      "english": 85,
+      "computer": 90
+    },
+    "address": {
+      "city": "Karachi",
+      "zipcode": "75000"
+    }
+  },
+  {
+    "name": "Fatima Khan",
+    "age": 22,
+    "grades": {
+      "math": 88,
+      "english": 95,
+      "computer": 85
+    },
+    "address": {
+      "city": "Islamabad",
+      "zipcode": "44000"
+    }
+  },
+  {
+    "name": "Zain Malik",
+    "age": 26,
+    "grades": {
+      "math": 72,
+      "english": 78,
+      "computer": 82
+    },
+    "address": {
+      "city": "Lahore",
+      "zipcode": "54000"
+    }
+  },
+  {
+    "name": "Sara Ahmed",
+    "age": 21,
+    "grades": {
+      "math": 91,
+      "english": 89,
+      "computer": 94
+    },
+    "address": {
+      "city": "Rawalpindi",
+      "zipcode": "46000"
+    }
+  },
+  {
+    "name": "Omar Sheikh",
+    "age": 25,
+    "grades": {
+      "math": 68,
+      "english": 82,
+      "computer": 76
+    },
+    "address": {
+      "city": "Islamabad",
+      "zipcode": "44000"
+    }
+  },
+  {
+    "name": "Zainab Malik",
+    "age": 23,
+    "grades": {
+      "math": 93,
+      "english": 91,
+      "computer": 89
+    },
+    "address": {
+      "city": "Lahore",
+      "zipcode": "54000"
+    }
+  }
+]

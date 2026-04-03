@@ -1,0 +1,45 @@
+<% title = 'All Resumes' %>
+<h1>All Resumes</h1>
+<div class="mb-3 d-flex gap-2">
+  <a class="btn btn-primary" href="/resumes/addNew">Add new CV</a>
+  <a class="btn btn-outline-secondary" href="/resumes">View</a>
+</div>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <% resumes.forEach(r => { %>
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= r.fullname %></h5>
+        <p class="card-text"><strong>Email:</strong> <%= r.email || '—' %></p>
+        <p class="card-text">
+          <strong>Contact:</strong> <%= r.contactNumber || '—' %>
+        </p>
+        <div class="d-flex gap-2 mt-2">
+          <a class="btn btn-sm btn-primary" href="/resumes/<%= r._id %>"
+            >View</a
+          >
+          <a class="btn btn-sm btn-secondary" href="/resumes/<%= r._id %>/edit"
+            >Edit</a
+          >
+          <form
+            action="/resumes/<%= r._id %>?_method=DELETE"
+            method="POST"
+            style="display: inline"
+          >
+            <button
+              class="btn btn-sm btn-danger"
+              onclick="return confirm('Delete this CV?')"
+            >
+              Delete
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="card-footer small text-muted">
+        Created: <%= r.createdAt.toISOString().slice(0,10) %>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+</div>

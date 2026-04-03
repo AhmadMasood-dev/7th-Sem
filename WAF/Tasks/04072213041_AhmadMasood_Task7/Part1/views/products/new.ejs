@@ -1,0 +1,7 @@
+<% title = 'New Product' %>
+<h1>New Product</h1>
+<form action="/products" method="POST">
+  <%- include('../partials/_form', { product: product }) %>
+  <button class="btn btn-primary">Create</button>
+  <a class="btn btn-secondary" href="/products">Cancel</a>
+</form>

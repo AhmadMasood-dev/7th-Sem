@@ -1,0 +1,58 @@
+<% title = resume.fullname || 'Resume Details' %>
+<h1><%= resume.fullname %></h1>
+<p><strong>Email:</strong> <%= resume.email || '—' %></p>
+<p><strong>Contact:</strong> <%= resume.contactNumber || '—' %></p>
+<hr />
+<% if (resume.summary) { %>
+<h5>Summary</h5>
+<p><%= resume.summary %></p>
+<% } %> <% if (resume.qualifications && resume.qualifications.length) { %>
+<h5>Qualifications</h5>
+<ul>
+  <% resume.qualifications.forEach(q => { %>
+  <li><%= q %></li>
+  <% }) %>
+</ul>
+<% } %> <% if (resume.professionalExperience &&
+resume.professionalExperience.length) { %>
+<h5>Professional Experience</h5>
+<% resume.professionalExperience.forEach(exp => { %>
+<div class="mb-3">
+  <h6><%= exp.role %> @ <%= exp.company %></h6>
+  <p class="small text-muted"><%= exp.startDate %> - <%= exp.endDate %></p>
+  <p><%= exp.description %></p>
+</div>
+<% }) %> <% } %> <% if (resume.skills && resume.skills.length) { %>
+<h5>Skills</h5>
+<p><%= resume.skills.join(', ') %></p>
+<% } %> <% if (resume.languages && resume.languages.length) { %>
+<h5>Languages</h5>
+<p><%= resume.languages.join(', ') %></p>
+<% } %> <% if (resume.hobbies && resume.hobbies.length) { %>
+<h5>Hobbies</h5>
+<p><%= resume.hobbies.join(', ') %></p>
+<% } %> <% if (resume.researchStatement) { %>
+<h5>Research Statement</h5>
+<p><%= resume.researchStatement %></p>
+<% } %> <% if (resume.documents && resume.documents.length) { %>
+<h5>Documents</h5>
+<ul>
+  <% resume.documents.forEach(doc => { %>
+  <li><a href="<%= doc.path %>" target="_blank"><%= doc.originalname %></a></li>
+  <% }) %>
+</ul>
+<% } %>
+
+<div class="mt-3 d-flex gap-2">
+  <a class="btn btn-secondary" href="/resumes/<%= resume._id %>/edit">Edit</a>
+  <form
+    action="/resumes/<%= resume._id %>?_method=DELETE"
+    method="POST"
+    style="display: inline"
+  >
+    <button class="btn btn-danger" onclick="return confirm('Delete this CV?')">
+      Delete
+    </button>
+  </form>
+  <a class="btn btn-link" href="/resumes">Back</a>
+</div>

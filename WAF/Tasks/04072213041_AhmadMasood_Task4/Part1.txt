@@ -1,0 +1,14 @@
+ show dbs
+use ahmad_masood_database
+db.createCollection("personal_collection")
+db.ahmad_masood_database.insertOne({"registrationNumber":1,"name":"ahmad","cityName":"isl"})
+
+db.createCollection("academics_collection")
+
+db.personal_collection.insertOne({"registrationNumber":2,"name":"ahmad2","cityName":"isl"})
+
+db.academics_collection.insertMany([{"registrationNumber":10,"degreeEnrolled":"cs","enrollmentYear":2022,"favoriteCourse":"ict"},{"registrationNumber":11,"degreeEnrolled":"cs","enrollmentYear":2021,"favoriteCourse":"mad"},{"registrationNumber":12,"degreeEnrolled":"it","enrollmentYear":2020,"favoriteCourse":"ai"},{"registrationNumber":14,"degreeEnrolled":"it","enrollmentYear":2023,"favoriteCourse":"wad"},{"registrationNumber":15,"degreeEnrolled":"cs","enrollmentYear":2024,"favoriteCourse":"ict"}])
+
+db.personal_collection.find({$or:[{cityName:"isl"},{cityName:'lah'}]})
+
+db.personal_collection.updateMany({$or:[{cityName:"isl"},{cityName:'lah'}]},{$set:{cityName:"raw/isl"}})
