@@ -1,0 +1,5 @@
+8.8.8.8 GET /index.html
+8.8.8.8 GET /products.html
+203.99.163.5 POST /login
+127.0.0.1 GET /admin
+192.168.0.10 GET /home
